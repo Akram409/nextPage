@@ -1,11 +1,18 @@
-import React from 'react';
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Header from './Component/Header'
+import Footer from './Component/Footer'
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-red-500'>hello</h1>
+      <Header />
+      <div className='min-h-[calc(100vh-136px)]'>
+        <Outlet />
+      </div>
+      <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
